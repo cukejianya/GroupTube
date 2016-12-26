@@ -1,0 +1,24 @@
+{
+  "name": "group-tube",
+  "version": "0.0.1",
+  "description": "a app that allows sharing of videos and music among friends",
+  "main": "server.js",
+  "dependencies": {
+    "youtube-player": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cukejianya/group-tube.git"
+  },
+  "author": "Chinedum Ukejianya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cukejianya/group-tube/issues"
+  },
+  "homepage": "https://github.com/cukejianya/group-tube#readme"
+}
