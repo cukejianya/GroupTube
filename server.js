@@ -1,7 +1,15 @@
-var http = require("http");
+// var io = require('socket.io')(80);
+// var cfg = require('./config.json')
 
-http.createServer(function(request, response){
-	response.writeHead(200, {"Content-Type": "text/plain"});
-	response.write("Yo");
-	response.end();
-}).listen(8888);
+let YouTubePlayer = require('youtube-player');
+let io = require('socket.io')(80);
+
+let player = YouTubePlayer('video-player');
+player.loadVideoById('M7lc1UVf-VE');
+player.playVideo();
+
+io.on('connection' (socket) => {
+	socket.on('updateState', (state) => {
+		socket.emit('changeState', state)
+	})
+})
